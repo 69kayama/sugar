@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — sugar</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/about.css">
+</head>
+<body class="page-about">
+
+  <!-- ▼ HEADER ▼ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="header-brand">
+        <img src="assets/avatar.png" alt="" class="header-avatar">
+        <span class="header-name">sugar - ROKU KAYAMA</span>
+      </a>
+      <nav class="header-nav" aria-label="メインナビゲーション">
+        <ul>
+          <li><a href="index.html"      class="nav-link">Home</a></li>
+          <li><a href="works.html"      class="nav-link">Works</a></li>
+          <li><a href="commission.html" class="nav-link">Commission</a></li>
+          <li><a href="about.html"      class="nav-link is-active">About</a></li>
+        </ul>
+        <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ▼ MOBILE NAV DROPDOWN ▼ -->
+  <div class="mobile-nav" aria-hidden="true">
+    <ul>
+      <li><a href="index.html"      class="nav-link">Home</a></li>
+      <li><a href="works.html"      class="nav-link">Works</a></li>
+      <li><a href="commission.html" class="nav-link">Commission</a></li>
+      <li><a href="about.html"      class="nav-link is-active">About</a></li>
+    </ul>
+  </div>
+
+  <!-- ▼ MAIN CONTENT ▼ -->
+  <main class="page-main about-main">
+    <p class="page-title">ABOUT</p>
+
+    <div class="page-content">
+
+      <!-- ▼ PROFILE ▼ -->
+      <section class="about-profile">
+
+        <!-- アバター（差し替え：assets/avatar.png を配置） -->
+        <img src="assets/avatar.png" alt="プロフィール画像" class="about-avatar">
+
+        <div class="about-bio">
+          <h1 class="about-name">鹿山ろく / Roku KAYAMA</h1>
+          <p class="about-role">Illustrator</p>
+
+          <p class="about-text">
+            キャラクターの内面や空気感を大切に、退廃的で静謐な世界観を描いています。
+            厚塗りメインにブラシ塗り、アニメ塗りなど塗り方を変えられます。
+          </p>
+          <p class="about-text">
+            VTuber・配信者向けの立ち絵・サムネイル制作から、
+            キービジュアル・MV用イラストまで幅広く対応しています。
+            ご依頼詳細は <a href="commission.html" style="color: var(--color-accent);">Commission</a> ページよりどうぞ。
+          </p>
+        </div>
+
+      </section>
+
+      <!-- ▼ SOFTWARE ▼ -->
+      <section class="about-section">
+        <div class="section-header">
+          <span class="section-label">SOFTWARE</span>
+          <span class="section-line"></span>
+        </div>
+        <ul class="about-software">
+          <li>Clip Studio Paint</li>
+          <li>Spine</li>
+        </ul>
+      </section>
+
+      <!-- ▼ HISTORY ▼ -->
+      <section class="about-section">
+        <div class="section-header">
+          <span class="section-label">HISTORY</span>
+          <span class="section-line"></span>
+        </div>
+        <ul class="about-history">
+          <li>
+            <span class="history-year">2026</span>
+            <span class="history-text">活動を開始</span>
+          </li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ▼ LEFT-BOTTOM WIDGET ▼ -->
+  <aside class="bottom-widget" aria-label="プロフィールウィジェット">
+    <div class="widget-brand">
+      <img src="assets/avatar.png" alt="" class="widget-avatar">
+      <span class="widget-name">ROKU KAYAMA</span>
+    </div>
+    <div class="widget-sns">
+      <a href="https://x.com/69kayama" class="sns-icon sns-icon--x" target="_blank" rel="noopener noreferrer" aria-label="X">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.713 6.068 5.45-6.068zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        <span class="tooltip">X</span>
+      </a>
+      <a href="https://xfolio.jp/portfolio/69kayama" class="sns-icon sns-icon--xfolio" target="_blank" rel="noopener noreferrer" aria-label="Xfolio">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21C9 19.5 3 16 3 11C3 7 5.5 4 8 4.5L12 10.5L16 4.5C18.5 4 21 7 21 11C21 16 15 19.5 12 21Z"/></svg>
+        <span class="tooltip">Xfolio</span>
+      </a>
+      <a href="#" class="sns-icon" target="_blank" rel="noopener noreferrer" aria-label="Skeb">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 3l4 4-13 13H4v-4L17 3z"/><path d="M14.5 5.5l4 4"/></svg>
+        <span class="tooltip">Skeb</span>
+      </a>
+      <a href="mailto:69kayama@gmail.com" class="sns-icon" aria-label="メール">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+        <span class="tooltip">Mail</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ▼ FOOTER ▼ -->
+  <footer class="site-footer">
+    <p class="footer-copy">© 2026 鹿山ろく</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

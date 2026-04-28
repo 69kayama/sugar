@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sugar</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body class="page-home">
+
+  <!-- ▼ HEADER ▼ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="header-brand">
+        <!-- 差し替え：assets/avatar.png を配置後に表示 -->
+        <img src="assets/avatar.png" alt="" class="header-avatar">
+        <span class="header-name">sugar - ROKU KAYAMA</span>
+      </a>
+      <nav class="header-nav" aria-label="メインナビゲーション">
+        <ul>
+          <li><a href="index.html"      class="nav-link is-active">Home</a></li>
+          <li><a href="works.html"      class="nav-link">Works</a></li>
+          <li><a href="commission.html" class="nav-link">Commission</a></li>
+          <li><a href="about.html"      class="nav-link">About</a></li>
+        </ul>
+        <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ▼ MOBILE NAV DROPDOWN ▼ -->
+  <div class="mobile-nav" aria-hidden="true">
+    <ul>
+      <li><a href="index.html"      class="nav-link is-active">Home</a></li>
+      <li><a href="works.html"      class="nav-link">Works</a></li>
+      <li><a href="commission.html" class="nav-link">Commission</a></li>
+      <li><a href="about.html"      class="nav-link">About</a></li>
+    </ul>
+  </div>
+
+  <!-- ▼ HOME WRAPPER ▼ -->
+  <div class="home-wrapper">
+
+    <main class="home-main">
+
+      <!-- LEFT: 名刺エリア -->
+      <aside class="home-card">
+
+        <!-- アバター（差し替え：assets/avatar.png） -->
+        <img src="assets/avatar.png" alt="プロフィール画像" class="card-avatar">
+
+        <!-- 名前・肩書き（差し替え：名前） -->
+        <h1 class="card-name">鹿山ろく / Roku KAYAMA</h1>
+        <div class="card-taglines">
+          <p class="card-tagline">Illustrator</p>
+        </div>
+
+        <!-- ステータスバッジ -->
+        <div class="card-badges">
+          <span class="badge">お仕事受付中</span>
+          <span class="badge">Skeb受付中</span>
+        </div>
+
+        <hr class="card-divider">
+
+        <!-- SNSアイコン（差し替え：各 href に URL を設定） -->
+        <div class="card-sns">
+
+          <!-- X -->
+          <a href="https://x.com/69kayama" class="sns-icon sns-icon--x" target="_blank" rel="noopener noreferrer" aria-label="X">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.713 6.068 5.45-6.068zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+            <span class="tooltip">X</span>
+          </a>
+
+          <!-- Xfolio -->
+          <a href="https://xfolio.jp/portfolio/69kayama" class="sns-icon sns-icon--xfolio" target="_blank" rel="noopener noreferrer" aria-label="Xfolio">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 21C9 19.5 3 16 3 11C3 7 5.5 4 8 4.5L12 10.5L16 4.5C18.5 4 21 7 21 11C21 16 15 19.5 12 21Z"/>
+            </svg>
+            <span class="tooltip">Xfolio</span>
+          </a>
+
+          <!-- Skeb（差し替え：href="https://skeb.jp/@yourname"） -->
+          <a href="#" class="sns-icon" target="_blank" rel="noopener noreferrer" aria-label="Skeb">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M17 3l4 4-13 13H4v-4L17 3z"/>
+              <path d="M14.5 5.5l4 4"/>
+            </svg>
+            <span class="tooltip">Skeb</span>
+          </a>
+
+          <!-- Mail -->
+          <a href="mailto:69kayama@gmail.com" class="sns-icon" aria-label="メール">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="M2 7l10 7 10-7"/>
+            </svg>
+            <span class="tooltip">Mail</span>
+          </a>
+
+        </div>
+
+        <!-- 更新履歴 -->
+        <div class="card-updates">
+          <p class="card-update-title">UPDATES</p>
+          <ul class="card-update-list">
+            <li class="card-update-item">
+              <span class="card-update-date">2026.04</span>
+              <span>サイトをオープンしました</span>
+            </li>
+          </ul>
+        </div>
+
+      </aside>
+
+      <!-- RIGHT: ヒーロースライダー（差し替え：各 src に画像パスを設定） -->
+      <section class="home-illust" aria-label="メインイラスト">
+        <div class="hero-slider">
+          <div class="hero-slide is-active">
+            <img src="assets/works/hero.png" alt="" class="home-illust-img">
+          </div>
+          <div class="hero-slide">
+            <img src="assets/works/hero.png" alt="" class="home-illust-img">
+          </div>
+          <div class="hero-slide">
+            <img src="assets/works/hero.png" alt="" class="home-illust-img">
+          </div>
+        </div>
+        <div class="hero-dots" aria-hidden="true">
+          <button class="hero-dot is-active"></button>
+          <button class="hero-dot"></button>
+          <button class="hero-dot"></button>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ▼ MOBILE-ONLY PREVIEW SECTIONS ▼ -->
+    <div class="home-mobile-sections">
+
+      <!-- WORKS -->
+      <section class="home-preview">
+        <div class="home-preview-header">
+          <span class="home-preview-title">WORKS</span>
+          <a href="works.html" class="home-preview-more">view more</a>
+        </div>
+        <p class="home-preview-desc">お仕事絵やファンアートなど</p>
+        <div class="home-preview-thumbs">
+          <img src="assets/works/hero.png" alt="" class="home-preview-thumb">
+          <img src="assets/works/hero.png" alt="" class="home-preview-thumb">
+          <img src="assets/works/hero.png" alt="" class="home-preview-thumb">
+        </div>
+      </section>
+
+      <!-- COMMISSION -->
+      <section class="home-preview">
+        <div class="home-preview-header">
+          <span class="home-preview-title">COMMISSION</span>
+          <a href="commission.html" class="home-preview-more">view more</a>
+        </div>
+        <p class="home-preview-desc">イラストのご依頼を受け付け中です。</p>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="home-preview">
+        <div class="home-preview-header">
+          <span class="home-preview-title">ABOUT</span>
+          <a href="about.html" class="home-preview-more">view more</a>
+        </div>
+        <p class="home-preview-desc">キャラクターの内面や空気感を大切に、退廃的で静謐な世界観を描いています。</p>
+      </section>
+
+    </div>
+
+    <!-- FOOTER (HOMEのみ) -->
+    <footer class="home-footer">
+      <p class="footer-copy">© 2026 鹿山ろく</p>
+    </footer>
+
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
