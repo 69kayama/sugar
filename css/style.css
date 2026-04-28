@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Sans+JP:wght@400;500&display=swap');
+
+/* ============================================================
+   CSS VARIABLES
+   ============================================================ */
+
+:root {
+  --color-bg:        #F6F3F2;
+  --color-surface:   #EEE9E8;
+  --color-text:      #2E2E2E;
+  --color-text-sub:  #7A7580;
+  --color-accent:    #8B3A3A;
+  --color-accent-lt: #C47A7A;
+  --color-border:    #D8D0CE;
+  --color-dark:      #1E1A1C;
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.site-header {
+  height: 42px;
+  background: var(--color-bg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.header-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--color-surface);
+  flex-shrink: 0;
+}
+
+.header-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text);
+  letter-spacing: 0.02em;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav > ul {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-text-sub);
+  letter-spacing: 0.08em;
+  transition: color 0.15s;
+}
+
+.nav-link:hover {
+  color: var(--color-text);
+}
+
+.nav-link.is-active {
+  color: var(--color-accent);
+}
+
+/* ---- Hamburger ---- */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20px;
+  height: 14px;
+  padding: 0;
+  margin-left: 20px;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-text);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.hamburger.is-open span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.hamburger.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.is-open span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/* ---- Mobile dropdown ---- */
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 42px;
+  left: 0;
+  right: 0;
+  background: var(--color-bg);
+  border-bottom: 0.5px solid var(--color-border);
+  z-index: 99;
+  padding: 14px 40px 20px;
+}
+
+.mobile-nav.is-open {
+  display: block;
+}
+
+.mobile-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobile-nav .nav-link {
+  font-size: 13px;
+}
+
+/* ============================================================
+   PAGE MAIN (fixed header offset)
+   ============================================================ */
+
+.page-main {
+  margin-top: 42px;
+}
+
+/* ============================================================
+   PAGE CONTENT WRAPPER
+   ============================================================ */
+
+.page-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   PAGE TITLE
+   ============================================================ */
+
+.page-title {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-text-sub);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/* ============================================================
+   PAGE DESC
+   ============================================================ */
+
+.page-desc {
+  font-size: 12px;
+  color: var(--color-text-sub);
+  text-align: center;
+  line-height: 1.7;
+  margin-top: -20px;
+  margin-bottom: 32px;
+}
+
+/* ============================================================
+   SITE FOOTER (HOME以外)
+   ============================================================ */
+
+.site-footer {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.footer-copy {
+  font-size: 9px;
+  color: var(--color-text-sub);
+  letter-spacing: 0.04em;
+}
+
+/* ============================================================
+   BADGE
+   ============================================================ */
+
+.badge {
+  font-size: 9px;
+  color: var(--color-accent);
+  border: 0.5px solid var(--color-accent-lt);
+  border-radius: 20px;
+  padding: 2px 8px;
+  background: var(--color-bg);
+  white-space: nowrap;
+}
+
+/* ============================================================
+   SNS ICON
+   ============================================================ */
+
+.sns-icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: opacity 0.15s;
+}
+
+.sns-icon:hover svg {
+  opacity: 0.55;
+}
+
+.sns-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: var(--color-accent);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+/* X・Xfolio公式ロゴはfill描画 */
+.sns-icon--x svg,
+.sns-icon--xfolio svg {
+  fill: var(--color-accent);
+  stroke: none;
+}
+
+/* ---- Tooltip ---- */
+
+.tooltip {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-text);
+  color: var(--color-bg);
+  font-size: 8px;
+  padding: 3px 6px;
+  border-radius: 3px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s;
+}
+
+.sns-icon:hover .tooltip {
+  opacity: 1;
+}
+
+/* ============================================================
+   SECTION HEADER (タイトル＋横線)
+   ============================================================ */
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-text);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.section-line {
+  flex: 1;
+  height: 0.5px;
+  background: var(--color-accent-lt);
+  opacity: 0.3;
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
+.btn-primary {
+  display: inline-block;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border-radius: 7px;
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.15s;
+}
+
+.btn-primary:hover {
+  opacity: 0.85;
+  color: var(--color-bg);
+}
+
+.btn-sub {
+  display: inline-block;
+  background: var(--color-surface);
+  border: 0.5px solid var(--color-accent-lt);
+  color: var(--color-text);
+  border-radius: 7px;
+  padding: 8px 14px;
+  font-size: 12px;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+
+.btn-sub:hover {
+  background: var(--color-border);
+}
+
+/* ============================================================
+   LEFT-BOTTOM WIDGET (HOME以外)
+   ============================================================ */
+
+.bottom-widget {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  z-index: 90;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.bottom-widget.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.widget-brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.widget-avatar {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--color-surface);
+  flex-shrink: 0;
+}
+
+.widget-name {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.widget-sns {
+  display: flex;
+  gap: 5px;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .header-nav > ul {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .bottom-widget {
+    display: none;
+  }
+}

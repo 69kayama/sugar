@@ -1,0 +1,342 @@
+/* ============================================================
+   COMMISSION — LAYOUT
+   ============================================================ */
+
+.commission-main {
+  padding: 48px 40px 80px;
+}
+
+
+.commission-section {
+  margin-bottom: 52px;
+}
+
+/* ============================================================
+   PRICE CARDS
+   ============================================================ */
+
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.price-tiers {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.price-tier {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 12px;
+  color: var(--color-accent);
+  letter-spacing: 0.02em;
+}
+
+.price-card {
+  background: var(--color-surface);
+  border-radius: 7px;
+  padding: 11px;
+}
+
+.price-card--highlight {
+  border: 0.5px solid var(--color-accent-lt);
+}
+
+.price-menu {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text);
+  letter-spacing: 0.02em;
+  margin-bottom: 4px;
+}
+
+.price-usage {
+  font-size: 10px;
+  color: var(--color-text-sub);
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+
+.price-amount {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 14px;
+  color: var(--color-accent);
+  letter-spacing: 0.02em;
+}
+
+/* ============================================================
+   OPTION CARDS
+   ============================================================ */
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.option-card {
+  background: var(--color-bg);
+  border: 0.5px solid var(--color-border);
+  border-radius: 6px;
+  padding: 8px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.option-name {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.option-note {
+  font-size: 9px;
+  color: var(--color-text-sub);
+  margin-top: 2px;
+}
+
+.option-price {
+  font-size: 11px;
+  color: var(--color-accent);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   NOTES (注釈)
+   ============================================================ */
+
+.price-notes {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.price-note {
+  font-size: 10px;
+  color: var(--color-text-sub);
+  line-height: 1.65;
+}
+
+/* ============================================================
+   PROCESS + TERMS (PC: 横並び)
+   ============================================================ */
+
+.process-terms {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.process-col {
+  flex: 0 0 268px;
+}
+
+.terms-col {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ---- PROCESS Steps ---- */
+
+.process-steps {
+  padding: 10px 0 4px;
+}
+
+.step {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  position: relative;
+  padding-bottom: 18px;
+}
+
+.step:last-child {
+  padding-bottom: 0;
+}
+
+/* Connector line from badge to next item */
+.step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 11px; /* center of 22px badge */
+  top: 22px;
+  width: 1px;
+  bottom: 0;
+  background: var(--color-border);
+  opacity: 0.5;
+}
+
+.step-badge {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  font-size: 10px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.step-badge--pay {
+  background: var(--color-surface);
+  border: 1px solid var(--color-accent-lt);
+  color: var(--color-accent);
+  font-size: 12px;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-style: normal;
+}
+
+.step-body {
+  padding-top: 2px;
+  flex: 1;
+}
+
+.step-title {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1.45;
+}
+
+.step--payment .step-title {
+  color: var(--color-accent);
+}
+
+.step-desc {
+  font-size: 11px;
+  color: var(--color-text-sub);
+  line-height: 1.55;
+  margin-top: 2px;
+}
+
+.step-note {
+  font-size: 10px;
+  color: var(--color-text-sub);
+  line-height: 1.55;
+  margin-top: 4px;
+}
+
+/* ---- TERMS Cards ---- */
+
+.terms-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px 0 4px;
+}
+
+.term-card {
+  background: var(--color-surface);
+  border-radius: 5px;
+  padding: 7px 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.term-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--color-accent-lt);
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+.term-text {
+  font-size: 12px;
+  color: var(--color-text);
+  line-height: 1.75;
+}
+
+.term-accent {
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+
+.contact-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0 4px;
+}
+
+.contact-note {
+  font-size: 11px;
+  color: var(--color-text-sub);
+}
+
+.contact-note a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ============================================================
+   RESPONSIVE — Tablet (769px–1024px)
+   ============================================================ */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .price-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-terms {
+    gap: 32px;
+  }
+
+  .process-col {
+    flex: 0 0 240px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — Mobile (≤768px)
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .commission-main {
+    padding: 36px 20px 60px;
+  }
+
+  .price-grid {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .options-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-terms {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .process-col {
+    flex: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+}

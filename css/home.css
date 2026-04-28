@@ -1,0 +1,337 @@
+/* ============================================================
+   HOME — LAYOUT
+   ============================================================ */
+
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 42px);
+  height: calc(100svh - 42px);
+  max-height: 652px;
+  max-width: 900px;
+  margin: 42px auto 0;
+  padding-top: 20px;
+}
+
+.home-main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ============================================================
+   LEFT COLUMN — Business Card
+   ============================================================ */
+
+.home-card {
+  width: 300px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 24px 40px;
+  gap: 10px;
+  border-right: 0.5px solid var(--color-border);
+  flex-shrink: 0;
+  position: relative;
+}
+
+.card-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--color-surface);
+  flex-shrink: 0;
+}
+
+.card-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-text);
+  letter-spacing: 0.02em;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.card-taglines {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.card-tagline {
+  font-size: 10px;
+  color: var(--color-text-sub);
+  letter-spacing: 0.04em;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.card-badges {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-divider {
+  display: none;
+}
+
+.card-sns {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+/* ============================================================
+   RIGHT COLUMN — Main Illustration / Slider
+   ============================================================ */
+
+.home-illust {
+  flex: 1;
+  background-color: var(--color-dark);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ---- Hero Slider ---- */
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.hero-slide.is-active {
+  opacity: 1;
+}
+
+.home-illust-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---- Dot indicators ---- */
+
+.hero-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+
+.hero-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(246, 243, 242, 0.4);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.hero-dot.is-active {
+  background: rgba(246, 243, 242, 0.9);
+}
+
+/* ============================================================
+   FOOTER (HOMEのみ)
+   ============================================================ */
+
+.home-footer {
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+/* ============================================================
+   HOME CARD — Update History
+   ============================================================ */
+
+.card-updates {
+  position: absolute;
+  bottom: 12px;
+  left: 24px;
+  right: 24px;
+  border-top: 0.5px solid var(--color-border);
+  padding-top: 7px;
+}
+
+.card-update-title {
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  color: var(--color-text-sub);
+  margin-bottom: 5px;
+  font-family: 'EB Garamond', Georgia, serif;
+}
+
+.card-update-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card-update-item {
+  display: flex;
+  gap: 8px;
+  font-size: 9px;
+  color: var(--color-text-sub);
+  line-height: 1.7;
+}
+
+.card-update-date {
+  color: var(--color-accent-lt);
+  flex-shrink: 0;
+}
+
+
+/* ============================================================
+   MOBILE-ONLY — Preview Sections
+   ============================================================ */
+
+.home-mobile-sections {
+  display: none;
+  padding: 0 20px;
+}
+
+.home-preview {
+  padding: 18px 0;
+  border-top: 0.5px solid var(--color-border);
+}
+
+.home-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.home-preview-title {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-text-sub);
+  letter-spacing: 0.14em;
+}
+
+.home-preview-more {
+  font-size: 9px;
+  color: var(--color-accent);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+.home-preview-desc {
+  font-size: 12px;
+  color: var(--color-text-sub);
+  line-height: 1.7;
+}
+
+.home-preview-thumbs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  margin-top: 10px;
+}
+
+.home-preview-thumb {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  width: 100%;
+  background-color: var(--color-surface);
+  display: block;
+}
+
+/* ============================================================
+   RESPONSIVE — Tablet (769px–1024px)
+   ============================================================ */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .home-card {
+    width: 260px;
+    min-width: 260px;
+    padding: 0 20px 40px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — Mobile (≤768px)
+   ============================================================ */
+
+@media (max-width: 768px) {
+  /* スクロール可にするため高さ制限を解除 */
+  .home-wrapper {
+    height: auto;
+    max-height: none;
+    padding-top: 0;
+  }
+
+  .home-main {
+    flex: 0 0 auto;
+    flex-direction: column;
+    overflow: visible;
+  }
+
+  /* イラストを上へ */
+  .home-illust {
+    order: -1;
+    flex: 0 0 50vh;
+  }
+
+  /* 名刺エリアを下へ */
+  .home-card {
+    order: 0;
+    width: 100%;
+    min-width: unset;
+    flex: 0 0 auto;
+    justify-content: flex-start;
+    border-right: none;
+    padding: 20px 24px 16px;
+    gap: 8px;
+  }
+
+  .card-updates {
+    display: none;
+  }
+
+  .card-avatar {
+    width: 52px;
+    height: 52px;
+  }
+
+  .card-name {
+    font-size: 15px;
+  }
+
+  /* プレビューセクション表示 */
+  .home-mobile-sections {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) and (max-height: 640px) {
+  .home-illust {
+    flex: 0 0 40vh;
+  }
+}
+
