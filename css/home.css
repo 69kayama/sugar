@@ -283,6 +283,8 @@
   .home-wrapper {
     height: auto;
     max-height: none;
+    max-width: unset;
+    margin-top: 64px;
     padding-top: 0;
   }
 

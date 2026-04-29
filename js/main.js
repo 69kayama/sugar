@@ -1,26 +1,53 @@
 (function () {
   'use strict';
 
-  // ---- Hamburger menu ----
+  // ---- Hamburger drawer ----
 
   var hamburger = document.querySelector('.hamburger');
   var mobileNav = document.querySelector('.mobile-nav');
 
   if (hamburger && mobileNav) {
+    var backdrop = document.createElement('div');
+    backdrop.className = 'mobile-nav-backdrop';
+    document.body.appendChild(backdrop);
+
+    var closeBtn = document.createElement('button');
+    closeBtn.className = 'mobile-nav-close';
+    closeBtn.setAttribute('aria-label', '閉じる');
+    closeBtn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>';
+    mobileNav.prepend(closeBtn);
+    closeBtn.addEventListener('click', closeNav);
+
+    function openNav() {
+      mobileNav.classList.add('is-open');
+      backdrop.classList.add('is-open');
+      hamburger.classList.add('is-open');
+      hamburger.setAttribute('aria-expanded', 'true');
+      mobileNav.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeNav() {
+      mobileNav.classList.remove('is-open');
+      backdrop.classList.remove('is-open');
+      hamburger.classList.remove('is-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      mobileNav.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
     hamburger.addEventListener('click', function () {
-      var isOpen = mobileNav.classList.toggle('is-open');
-      hamburger.classList.toggle('is-open', isOpen);
-      hamburger.setAttribute('aria-expanded', String(isOpen));
-      mobileNav.setAttribute('aria-hidden', String(!isOpen));
+      mobileNav.classList.contains('is-open') ? closeNav() : openNav();
     });
 
+    backdrop.addEventListener('click', closeNav);
+
     mobileNav.querySelectorAll('.nav-link').forEach(function (link) {
-      link.addEventListener('click', function () {
-        mobileNav.classList.remove('is-open');
-        hamburger.classList.remove('is-open');
-        hamburger.setAttribute('aria-expanded', 'false');
-        mobileNav.setAttribute('aria-hidden', 'true');
-      });
+      link.addEventListener('click', closeNav);
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeNav();
     });
   }
 
@@ -67,7 +94,7 @@
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll(); // 初期状態の確認
+    handleScroll();
   }
 
 })();

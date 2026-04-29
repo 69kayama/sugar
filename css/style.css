@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Sans+JP:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Roboto:wght@400;500&family=M+PLUS+Rounded+1c:wght@800;900&family=Noto+Sans+JP:wght@400;500&display=swap');
 
 /* ============================================================
    CSS VARIABLES
@@ -28,6 +28,7 @@
 html {
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -89,19 +90,25 @@ button {
   flex-shrink: 0;
 }
 
-.header-avatar {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  object-fit: cover;
-  background-color: var(--color-surface);
+
+.header-name-1 {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 13px;
+  font-weight: 900;
+  color: var(--color-text);
+  letter-spacing: 0.02em;
+}
+
+.header-sep {
+  font-size: 13px;
+  color: var(--color-text-sub);
   flex-shrink: 0;
 }
 
-.header-name {
+.header-name-2 {
+  font-family: 'Roboto', sans-serif;
   font-size: 13px;
-  font-weight: 500;
-  color: var(--color-text);
+  color: var(--color-text-sub);
   letter-spacing: 0.02em;
 }
 
@@ -163,32 +170,76 @@ button {
   transform: translateY(-6.5px) rotate(-45deg);
 }
 
-/* ---- Mobile dropdown ---- */
+/* ---- Mobile drawer ---- */
 
 .mobile-nav {
-  display: none;
   position: fixed;
-  top: 42px;
-  left: 0;
+  top: 0;
   right: 0;
+  height: 100%;
+  width: 55%;
+  max-width: 240px;
   background: var(--color-bg);
-  border-bottom: 0.5px solid var(--color-border);
-  z-index: 99;
-  padding: 14px 40px 20px;
+  z-index: 111;
+  padding: 80px 28px 24px;
+  transform: translateX(100%);
+  transition: transform 0.25s ease;
+  box-shadow: -2px 0 16px rgba(0, 0, 0, 0.08);
 }
 
 .mobile-nav.is-open {
-  display: block;
+  transform: translateX(0);
 }
 
 .mobile-nav ul {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }
 
 .mobile-nav .nav-link {
   font-size: 13px;
+}
+
+.mobile-nav-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-sub);
+  transition: opacity 0.15s;
+}
+
+.mobile-nav-close:hover {
+  opacity: 0.6;
+}
+
+.mobile-nav-close svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--color-text);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.mobile-nav-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 110;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.mobile-nav-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* ============================================================
@@ -216,7 +267,7 @@ button {
   font-family: 'EB Garamond', Georgia, serif;
   font-size: 16px;
   font-weight: 500;
-  color: var(--color-text-sub);
+  color: var(--color-text);
   letter-spacing: 0.14em;
   text-transform: uppercase;
   text-align: center;
@@ -298,11 +349,20 @@ button {
   pointer-events: none;
 }
 
-/* X・Xfolio公式ロゴはfill描画 */
-.sns-icon--x svg,
-.sns-icon--xfolio svg {
+/* X公式ロゴはfill描画 */
+.sns-icon--x svg {
   fill: var(--color-accent);
   stroke: none;
+}
+
+.sns-icon--xfolio svg {
+  width: 18px;
+  height: 18px;
+}
+
+.sns-icon--mail svg {
+  width: 17px;
+  height: 17px;
 }
 
 /* ---- Tooltip ---- */
@@ -446,12 +506,50 @@ button {
    ============================================================ */
 
 @media (max-width: 768px) {
+  /* ---- 2-line brand header ---- */
+  .site-header {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .header-inner {
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+    padding: 0 15px;
+  }
+
+  .header-brand {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  .header-sep {
+    display: none;
+  }
+
+  .header-name-1 {
+    font-size: 15px;
+  }
+
+  .header-name-2 {
+    font-size: 9px;
+    color: var(--color-text-sub);
+    letter-spacing: 0.04em;
+  }
+
   .header-nav > ul {
     display: none;
   }
 
   .hamburger {
     display: flex;
+  }
+
+/* ---- page offset for taller mobile header ---- */
+  .page-main {
+    margin-top: 64px;
   }
 
   .bottom-widget {
