@@ -2,10 +2,6 @@
    ABOUT — LAYOUT
    ============================================================ */
 
-.about-main {
-  padding: 48px 40px 80px;
-}
-
 
 /* ============================================================
    PROFILE
@@ -51,11 +47,6 @@
   margin-bottom: 4px;
 }
 
-.about-birthday {
-  font-size: 11px;
-  color: var(--color-text-sub);
-  margin-bottom: 16px;
-}
 
 .about-text {
   font-size: 13px;
@@ -140,10 +131,6 @@
    ============================================================ */
 
 @media (max-width: 768px) {
-  .about-main {
-    padding: 36px 24px 60px;
-  }
-
   .about-profile {
     flex-direction: column;
     align-items: center;
@@ -176,6 +163,7 @@
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .about-main {
-    padding: 48px 32px 80px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }

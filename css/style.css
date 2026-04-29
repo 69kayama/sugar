@@ -12,7 +12,10 @@
   --color-accent:    #8B3A3A;
   --color-accent-lt: #C47A7A;
   --color-border:    #D8D0CE;
-  --color-dark:      #1E1A1C;
+  --color-dark:         #1E1A1C;
+  --color-dark-overlay: rgba(30, 26, 28, 0.52);   /* Works ホバーオーバーレイ */
+  --color-dot:          rgba(246, 243, 242, 0.40); /* ヒーロードット（非選択） */
+  --color-dot-active:   rgba(246, 243, 242, 0.90); /* ヒーロードット（選択中） */
 }
 
 /* ============================================================
@@ -201,6 +204,60 @@ button {
   font-size: 13px;
 }
 
+.mobile-nav-sns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 0.5px solid var(--color-border);
+}
+
+.mobile-sns-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 9px 4px 6px;
+  border: 0.5px solid var(--color-border);
+  border-radius: 20px;
+  background: var(--color-surface);
+  color: var(--color-text-sub);
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.mobile-sns-link:hover {
+  border-color: var(--color-accent-lt);
+  color: var(--color-text);
+}
+
+.mobile-sns-icon {
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mobile-sns-icon svg {
+  width: 12px;
+  height: 12px;
+  fill: none;
+  stroke: var(--color-accent);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.mobile-sns-icon.sns-icon--x svg {
+  width: 11px;
+  height: 11px;
+  fill: var(--color-accent);
+  stroke: none;
+}
+
 .mobile-nav-close {
   position: absolute;
   top: 16px;
@@ -248,6 +305,7 @@ button {
 
 .page-main {
   margin-top: 42px;
+  padding: 48px 40px 48px;
 }
 
 /* ============================================================
@@ -550,6 +608,7 @@ button {
 /* ---- page offset for taller mobile header ---- */
   .page-main {
     margin-top: 64px;
+    padding: 36px 16px 48px;
   }
 
   .bottom-widget {

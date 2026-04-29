@@ -2,10 +2,6 @@
    COMMISSION — LAYOUT
    ============================================================ */
 
-.commission-main {
-  padding: 48px 40px 80px;
-}
-
 
 .commission-section {
   margin-bottom: 52px;
@@ -173,7 +169,7 @@
   opacity: 0.5;
 }
 
-.step-badge {
+.step-num {
   width: 22px;
   height: 22px;
   border-radius: 50%;
@@ -189,7 +185,7 @@
   z-index: 1;
 }
 
-.step-badge--pay {
+.step-num--pay {
   background: var(--color-surface);
   border: 1px solid var(--color-accent-lt);
   color: var(--color-accent);
@@ -311,10 +307,6 @@
    ============================================================ */
 
 @media (max-width: 768px) {
-  .commission-main {
-    padding: 36px 20px 60px;
-  }
-
   .price-grid {
     grid-template-columns: 1fr;
     gap: 6px;

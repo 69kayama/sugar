@@ -55,13 +55,6 @@
   line-height: 1.3;
 }
 
-.card-taglines {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-}
-
 .card-tagline {
   font-size: 10px;
   color: var(--color-text-sub);
@@ -77,9 +70,6 @@
   justify-content: center;
 }
 
-.card-divider {
-  display: none;
-}
 
 .card-sns {
   display: flex;
@@ -140,7 +130,7 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: rgba(246, 243, 242, 0.4);
+  background: var(--color-dot);
   border: none;
   padding: 0;
   cursor: pointer;
@@ -148,7 +138,7 @@
 }
 
 .hero-dot.is-active {
-  background: rgba(246, 243, 242, 0.9);
+  background: var(--color-dot-active);
 }
 
 /* ============================================================

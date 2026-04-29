@@ -5,8 +5,8 @@
   // category: 'commission' | 'original' | 'fanart'
   // caption: 画像下の注釈テキスト（空文字でタイトルを表示）
   var works = [
-    { title: '作品タイトル 01', src: 'assets/works/hero.png', category: 'fanart',      caption: '' },
-    { title: '作品タイトル 02', src: 'assets/works/hero.png', category: 'original',    caption: '' },
+    { title: '長文テスト長文テスト長文テスト長文テスト長文テスト長文テスト長文テスト長文テスト長文テスト長文テスト長文テスト長文テスト長文テスト長文テスト', src: 'assets/works/hero.png', category: 'fanart',      caption: '' },
+    { title: '長文テスト02長文テスト02長文テスト02長文テスト02長文テスト02長文テスト02長文テスト02長文テスト02長文テスト02長文テスト02長文テスト02', src: 'assets/works/hero.png', category: 'original',    caption: '' },
     { title: '作品タイトル 03', src: 'assets/works/hero.png', category: 'commission',  caption: '' },
     { title: '作品タイトル 04', src: 'assets/works/hero.png', category: 'fanart',      caption: '' },
     { title: '作品タイトル 05', src: 'assets/works/hero.png', category: 'original',    caption: '' },
