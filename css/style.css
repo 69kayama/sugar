@@ -147,7 +147,7 @@ button {
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 20px;
+  width: 25px;
   height: 14px;
   padding: 0;
   margin-left: 20px;
@@ -162,7 +162,7 @@ button {
 }
 
 .hamburger.is-open span:nth-child(1) {
-  transform: translateY(6.5px) rotate(45deg);
+  transform: translateY(7.5px) rotate(45deg);
 }
 
 .hamburger.is-open span:nth-child(2) {
@@ -180,8 +180,8 @@ button {
   top: 0;
   right: 0;
   height: 100%;
-  width: 55%;
-  max-width: 240px;
+  width: 72%;
+  max-width: 280px;
   background: var(--color-bg);
   z-index: 111;
   padding: 80px 28px 24px;
@@ -445,6 +445,31 @@ button {
   opacity: 1;
 }
 
+/* ---- SNS mobile label ---- */
+.sns-mobile-label {
+  display: none;
+}
+
+.sns-site-name {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-text);
+  letter-spacing: 0.04em;
+}
+
+.sns-site-desc {
+  font-size: 10px;
+  color: var(--color-text-sub);
+  letter-spacing: 0.02em;
+}
+
+/* ---- Mobile nav SNS description ---- */
+.mobile-sns-desc {
+  font-size: 9px;
+  color: var(--color-text-sub);
+  letter-spacing: 0.02em;
+}
+
 /* ============================================================
    SECTION HEADER (タイトル＋横線)
    ============================================================ */
@@ -613,5 +638,15 @@ button {
 
   .bottom-widget {
     display: none;
+  }
+
+  /* Mobile nav SNS: vertical list */
+  .mobile-nav-sns {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .mobile-sns-link {
+    border-radius: 6px;
   }
 }

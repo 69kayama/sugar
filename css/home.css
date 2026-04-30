@@ -306,6 +306,31 @@
     display: none;
   }
 
+  /* SNS: vertical list with name + desc */
+  .card-sns {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 2px;
+  }
+
+  .card-sns .sns-icon {
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .card-sns .tooltip {
+    display: none;
+  }
+
+  .card-sns .sns-mobile-label {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+  }
+
   .card-avatar {
     width: 52px;
     height: 52px;
