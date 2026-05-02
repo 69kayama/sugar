@@ -1,23 +1,7 @@
 (function () {
   'use strict';
 
-  // ---- 作品データ（差し替え用）----
-  // category: 'commission' | 'original' | 'fanart'
-  // caption: 画像下の注釈テキスト（空文字でタイトルを表示）
-  var works = [
-    { title: '長文テスト長文テスト長文テスト長文テスト長文テスト長文テスト長文テスト長文テスト長文テスト長文テスト長文テスト長文テスト長文テスト長文テスト', src: 'assets/works/hero.png', category: 'fanart',      caption: '' },
-    { title: '長文テスト02長文テスト02長文テスト02長文テスト02長文テスト02長文テスト02長文テスト02長文テスト02長文テスト02長文テスト02長文テスト02', src: 'assets/works/hero.png', category: 'original',    caption: '' },
-    { title: '作品タイトル 03', src: 'assets/works/hero.png', category: 'commission',  caption: '' },
-    { title: '作品タイトル 04', src: 'assets/works/hero.png', category: 'fanart',      caption: '' },
-    { title: '作品タイトル 05', src: 'assets/works/hero.png', category: 'original',    caption: '' },
-    { title: '作品タイトル 06', src: 'assets/works/hero.png', category: 'fanart',      caption: '' },
-    { title: '作品タイトル 07', src: 'assets/works/hero.png', category: 'commission',  caption: '' },
-    { title: '作品タイトル 08', src: 'assets/works/hero.png', category: 'fanart',      caption: '' },
-    { title: '作品タイトル 09', src: 'assets/works/hero.png', category: 'original',    caption: '' },
-    { title: '作品タイトル 10', src: 'assets/works/hero.png', category: 'commission',  caption: '' },
-    { title: '作品タイトル 11', src: 'assets/works/hero.png', category: 'fanart',      caption: '' },
-    { title: '作品タイトル 12', src: 'assets/works/hero.png', category: 'original',    caption: '' },
-  ];
+  // 作品データは works-data.js の worksData を参照
 
   var filterLabels = {
     all:        '全て',
@@ -67,8 +51,8 @@
 
   function renderGallery(category) {
     currentFiltered = category === 'all'
-      ? works.slice()
-      : works.filter(function (w) { return w.category === category; });
+      ? worksData.slice().reverse()
+      : worksData.filter(function (w) { return w.category === category; }).reverse();
 
     galleryEl.innerHTML = '';
 

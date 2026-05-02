@@ -70,6 +70,10 @@
   margin-bottom: 40px;
 }
 
+.about-section:last-child {
+  margin-bottom: 0;
+}
+
 /* ---- Software ---- */
 
 .about-software {

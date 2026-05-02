@@ -9,7 +9,9 @@
 </head>
 <body class="page-about">
 
-  <!-- ▼ HEADER ▼ -->
+  <!-- ============================================================
+       HEADER (共通：PC / Mobile)
+  ============================================================ -->
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="header-brand">
@@ -18,12 +20,14 @@
         <span class="header-name-2">Roku Kayama's portfolio</span>
       </a>
       <nav class="header-nav" aria-label="メインナビゲーション">
+        <!-- [PC] ナビゲーション -->
         <ul>
           <li><a href="index.html"      class="nav-link">Home</a></li>
           <li><a href="works.html"      class="nav-link">Works</a></li>
           <li><a href="commission.html" class="nav-link">Commission</a></li>
           <li><a href="about.html"      class="nav-link is-active">About</a></li>
         </ul>
+        <!-- [Mobile] ハンバーガーボタン -->
         <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -31,90 +35,113 @@
     </div>
   </header>
 
-  <!-- ▼ MOBILE NAV DROPDOWN ▼ -->
-  <div class="mobile-nav" aria-hidden="true">
-    <ul>
-      <li><a href="index.html"      class="nav-link">Home</a></li>
-      <li><a href="works.html"      class="nav-link">Works</a></li>
-      <li><a href="commission.html" class="nav-link">Commission</a></li>
-      <li><a href="about.html"      class="nav-link is-active">About</a></li>
-    </ul>
-    <div class="mobile-nav-sns">
-      <a href="https://x.com/69kayama" class="mobile-sns-link" target="_blank" rel="noopener noreferrer" aria-label="X">
-        <span class="mobile-sns-icon sns-icon--x"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.713 6.068 5.45-6.068zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></span>
-        <span class="mobile-sns-label">X</span>
-        <span class="mobile-sns-desc">趣味・制作報告</span>
-      </a>
-      <a href="#" class="mobile-sns-link" target="_blank" rel="noopener noreferrer" aria-label="Wick">
-        <span class="mobile-sns-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C10.5 5.5 8.5 8.5 8.5 11a3.5 3.5 0 0 0 7 0c0-2.5-2-5.5-3.5-9z"/><line x1="12" y1="14.5" x2="12" y2="19.5"/><line x1="9" y1="20.5" x2="15" y2="20.5"/></svg></span>
-        <span class="mobile-sns-label">Wick</span>
-        <span class="mobile-sns-desc">一時創作</span>
-      </a>
-      <a href="https://xfolio.jp/portfolio/69kayama" class="mobile-sns-link" target="_blank" rel="noopener noreferrer" aria-label="Xfolio">
-        <span class="mobile-sns-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21 L3 13 L6 7 L9 3 L15 9"/><path d="M12 21 L21 13 L18 7 L15 3 L9 9"/></svg></span>
-        <span class="mobile-sns-label">Xfolio</span>
-        <span class="mobile-sns-desc">イラスト・落描き置き場</span>
-      </a>
-      <a href="https://skeb.jp/@69kayama" class="mobile-sns-link" target="_blank" rel="noopener noreferrer" aria-label="Skeb">
-        <span class="mobile-sns-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="17" height="18" rx="2"/><line x1="7" y1="9" x2="17" y2="9"/><line x1="7" y1="13" x2="17" y2="13"/><line x1="7" y1="17" x2="13" y2="17"/></svg></span>
-        <span class="mobile-sns-label">Skeb</span>
-        <span class="mobile-sns-desc">おまかせイラスト</span>
-      </a>
-      <a href="#" class="mobile-sns-link" target="_blank" rel="noopener noreferrer" aria-label="つなぐ">
-        <span class="mobile-sns-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 17H7a5 5 0 0 1 0-10h2"/><path d="M15 7h2a5 5 0 0 1 0 10h-2"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span>
-        <span class="mobile-sns-label">つなぐ</span>
-        <span class="mobile-sns-desc">Wickポイント可・手数料0</span>
-      </a>
-      <a href="mailto:69kayama@gmail.com" class="mobile-sns-link" aria-label="メール">
-        <span class="mobile-sns-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg></span>
-        <span class="mobile-sns-label">Mail</span>
-        <span class="mobile-sns-desc">内容相談・商用依頼</span>
-      </a>
-    </div>
-  </div>
-
-  <!-- ▼ MAIN CONTENT ▼ -->
+  <!-- ============================================================
+       MAIN (コンテンツエリア)
+  ============================================================ -->
   <main class="page-main about-main">
+
+    <!-- Mobile Only: Drawer Navigation -->
+    <div class="mobile-nav" aria-hidden="true">
+      <ul>
+        <li><a href="index.html"      class="nav-link">Home</a></li>
+        <li><a href="works.html"      class="nav-link">Works</a></li>
+        <li><a href="commission.html" class="nav-link">Commission</a></li>
+        <li><a href="about.html"      class="nav-link is-active">About</a></li>
+      </ul>
+      <div class="mobile-nav-sns">
+        <a href="https://x.com/69kayama" class="mobile-sns-link" target="_blank" rel="noopener noreferrer" aria-label="X">
+          <span class="mobile-sns-icon sns-icon--x"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.713 6.068 5.45-6.068zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></span>
+        </a>
+        <a href="https://wick-share.com/sns/share/39kHZdvz" class="mobile-sns-link" target="_blank" rel="noopener noreferrer" aria-label="Wick">
+          <span class="mobile-sns-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C10.5 5.5 8.5 8.5 8.5 11a3.5 3.5 0 0 0 7 0c0-2.5-2-5.5-3.5-9z"/><line x1="12" y1="14.5" x2="12" y2="19.5"/><line x1="9" y1="20.5" x2="15" y2="20.5"/></svg></span>
+        </a>
+        <a href="https://xfolio.jp/portfolio/69kayama" class="mobile-sns-link" target="_blank" rel="noopener noreferrer" aria-label="Xfolio">
+          <span class="mobile-sns-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21 L3 13 L6 7 L9 3 L15 9"/><path d="M12 21 L21 13 L18 7 L15 3 L9 9"/></svg></span>
+        </a>
+        <a href="https://skeb.jp/@69kayama" class="mobile-sns-link" target="_blank" rel="noopener noreferrer" aria-label="Skeb">
+          <span class="mobile-sns-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="17" height="18" rx="2"/><line x1="7" y1="9" x2="17" y2="9"/><line x1="7" y1="13" x2="17" y2="13"/><line x1="7" y1="17" x2="13" y2="17"/></svg></span>
+        </a>
+        <a href="#" class="mobile-sns-link" target="_blank" rel="noopener noreferrer" aria-label="つなぐ">
+          <span class="mobile-sns-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 17H7a5 5 0 0 1 0-10h2"/><path d="M15 7h2a5 5 0 0 1 0 10h-2"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span>
+        </a>
+        <a href="mailto:69kayama@gmail.com" class="mobile-sns-link" aria-label="メール">
+          <span class="mobile-sns-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg></span>
+        </a>
+      </div>
+    </div>
+
+    <!-- [Common] ページタイトル -->
     <h1 class="page-title">ABOUT</h1>
 
+    <!-- [Common] ページコンテンツ -->
     <div class="page-content">
 
-      <!-- ▼ PROFILE ▼ -->
+      <!-- プロフィールセクション -->
       <section class="about-profile">
-
-        <!-- アバター（差し替え：assets/avatar.png を配置） -->
         <img src="assets/avatar.png" alt="プロフィール画像" class="about-avatar">
-
         <div class="about-bio">
           <h2 class="about-name">鹿山ろく / Roku KAYAMA</h2>
           <p class="about-role">Illustrator</p>
-
           <p class="about-text">
-            キャラクターの内面や空気感を大切に、退廃的で静謐な世界観を描いています。
-            厚塗りメインにブラシ塗り、アニメ塗りなど塗り方を変えられます。
+            広島県出身/在住。<br>
+            キャラクターの内面や空気感を大切に、どこか退廃的で静かな世界観のイラストを制作しています。
+            厚塗りをベースに、ブラシ塗り・アニメ塗りなど作品や用途に合わせて塗り方を使い分けています。
           </p>
           <p class="about-text">
-            VTuber・配信者向けの立ち絵・サムネイル制作から、
-            キービジュアル・MV用イラストまで幅広く対応しています。
-            ご依頼詳細は <a href="commission.html">Commission</a> ページよりどうぞ。
+            VTuber・配信者向けの立ち絵やサムネイル制作をはじめ、
+            キービジュアル・MV用イラストまで幅広く対応可能です。
+            ご依頼の詳細は <a href="commission.html">Commission</a> ページをご覧ください。
+          </p>
+          <p class="about-text">
+            ご連絡先：69kayama@gmail.com
           </p>
         </div>
-
       </section>
 
-      <!-- ▼ SOFTWARE ▼ -->
+      <!-- 外部リンク -->
       <section class="about-section">
         <div class="section-header">
-          <span class="section-label">SOFTWARE</span>
+          <span class="section-label">LINKS</span>
           <span class="section-line"></span>
         </div>
         <ul class="about-software">
-          <li>Clip Studio Paint</li>
+          <li>X　更新・制作報告</li>
+          <li>Wick　一時創作・日常</li>
+          <li>Xfolio　イラスト・落描きまとめ</li>
+          <li>Skeb　おまかせイラスト制作</li>
+          <li>つなぐ　Wickポイント使用で手数料0</li>
+        </ul>
+      </section>
+
+      <!-- できること -->
+      <section class="about-section">
+        <div class="section-header">
+          <span class="section-label">SERVICES</span>
+          <span class="section-line"></span>
+        </div>
+        <ul class="about-software">
+          <li>イラスト制作</li>
+          <li>漫画制作</li>
+          <li>アニメーション制作</li>
+          <li>キャラクターデザイン</li>
+        </ul>
+      </section>
+
+      <!-- ツール -->
+      <section class="about-section">
+        <div class="section-header">
+          <span class="section-label">TOOLS</span>
+          <span class="section-line"></span>
+        </div>
+        <ul class="about-software">
+          <li>Windows 11</li>
+          <li>HUION Kamvas Pro 19</li>
+          <li>CLIP STUDIO PAINT EX</li>
           <li>Spine</li>
         </ul>
       </section>
 
-      <!-- ▼ HISTORY ▼ -->
+      <!-- 略歴 -->
       <section class="about-section">
         <div class="section-header">
           <span class="section-label">HISTORY</span>
@@ -123,59 +150,63 @@
         <ul class="about-history">
           <li>
             <span class="history-year">2026</span>
-            <span class="history-text">活動を開始</span>
+            <span class="history-text">活動を開始、各種SNSとウェブサイト開設</span>
           </li>
         </ul>
       </section>
 
     </div>
+
+    <!-- [PC Only] プロフィールウィジェット (スクロールで表示) -->
+    <aside class="bottom-widget" aria-label="プロフィールウィジェット">
+      <div class="widget-brand">
+        <img src="assets/avatar.png" alt="" class="widget-avatar">
+        <span class="widget-name">ROKU KAYAMA</span>
+      </div>
+      <div class="widget-sns">
+        <a href="https://x.com/69kayama" class="sns-icon sns-icon--x" target="_blank" rel="noopener noreferrer" aria-label="X">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.713 6.068 5.45-6.068zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <span class="tooltip">趣味・制作報告</span>
+          <span class="sns-mobile-label"><span class="sns-site-name">X</span><span class="sns-site-desc">趣味・制作報告</span></span>
+        </a>
+        <a href="https://wick-share.com/sns/share/39kHZdvz" class="sns-icon sns-icon--wick" target="_blank" rel="noopener noreferrer" aria-label="Wick">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C10.5 5.5 8.5 8.5 8.5 11a3.5 3.5 0 0 0 7 0c0-2.5-2-5.5-3.5-9z"/><line x1="12" y1="14.5" x2="12" y2="19.5"/><line x1="9" y1="20.5" x2="15" y2="20.5"/></svg>
+          <span class="tooltip">一時創作</span>
+          <span class="sns-mobile-label"><span class="sns-site-name">Wick</span><span class="sns-site-desc">一時創作</span></span>
+        </a>
+        <a href="https://xfolio.jp/portfolio/69kayama" class="sns-icon sns-icon--xfolio" target="_blank" rel="noopener noreferrer" aria-label="Xfolio">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21 L3 13 L6 7 L9 3 L15 9"/><path d="M12 21 L21 13 L18 7 L15 3 L9 9"/></svg>
+          <span class="tooltip">イラスト・落描き置き場</span>
+          <span class="sns-mobile-label"><span class="sns-site-name">Xfolio</span><span class="sns-site-desc">イラスト・落描き置き場</span></span>
+        </a>
+        <a href="https://skeb.jp/@69kayama" class="sns-icon" target="_blank" rel="noopener noreferrer" aria-label="Skeb">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="17" height="18" rx="2"/><line x1="7" y1="9" x2="17" y2="9"/><line x1="7" y1="13" x2="17" y2="13"/><line x1="7" y1="17" x2="13" y2="17"/></svg>
+          <span class="tooltip">おまかせイラスト</span>
+          <span class="sns-mobile-label"><span class="sns-site-name">Skeb</span><span class="sns-site-desc">おまかせイラスト</span></span>
+        </a>
+        <a href="#" class="sns-icon sns-icon--tsunagu" target="_blank" rel="noopener noreferrer" aria-label="つなぐ">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 17H7a5 5 0 0 1 0-10h2"/><path d="M15 7h2a5 5 0 0 1 0 10h-2"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          <span class="tooltip">Wickポイント可・手数料0</span>
+          <span class="sns-mobile-label"><span class="sns-site-name">つなぐ</span><span class="sns-site-desc">Wickポイント可・手数料0</span></span>
+        </a>
+        <a href="mailto:69kayama@gmail.com" class="sns-icon sns-icon--mail" aria-label="メール">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+          <span class="tooltip">内容相談・商用依頼</span>
+          <span class="sns-mobile-label"><span class="sns-site-name">Mail</span><span class="sns-site-desc">内容相談・商用依頼</span></span>
+        </a>
+      </div>
+    </aside>
+
   </main>
 
-  <!-- ▼ LEFT-BOTTOM WIDGET ▼ -->
-  <aside class="bottom-widget" aria-label="プロフィールウィジェット">
-    <div class="widget-brand">
-      <img src="assets/avatar.png" alt="" class="widget-avatar">
-      <span class="widget-name">ROKU KAYAMA</span>
-    </div>
-    <div class="widget-sns">
-      <a href="https://x.com/69kayama" class="sns-icon sns-icon--x" target="_blank" rel="noopener noreferrer" aria-label="X">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.713 6.068 5.45-6.068zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-        <span class="tooltip">趣味・制作報告</span>
-        <span class="sns-mobile-label"><span class="sns-site-name">X</span><span class="sns-site-desc">趣味・制作報告</span></span>
-      </a>
-      <a href="#" class="sns-icon sns-icon--wick" target="_blank" rel="noopener noreferrer" aria-label="Wick">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C10.5 5.5 8.5 8.5 8.5 11a3.5 3.5 0 0 0 7 0c0-2.5-2-5.5-3.5-9z"/><line x1="12" y1="14.5" x2="12" y2="19.5"/><line x1="9" y1="20.5" x2="15" y2="20.5"/></svg>
-        <span class="tooltip">一時創作</span>
-        <span class="sns-mobile-label"><span class="sns-site-name">Wick</span><span class="sns-site-desc">一時創作</span></span>
-      </a>
-      <a href="https://xfolio.jp/portfolio/69kayama" class="sns-icon sns-icon--xfolio" target="_blank" rel="noopener noreferrer" aria-label="Xfolio">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21 L3 13 L6 7 L9 3 L15 9"/><path d="M12 21 L21 13 L18 7 L15 3 L9 9"/></svg>
-        <span class="tooltip">イラスト・落描き置き場</span>
-        <span class="sns-mobile-label"><span class="sns-site-name">Xfolio</span><span class="sns-site-desc">イラスト・落描き置き場</span></span>
-      </a>
-      <a href="https://skeb.jp/@69kayama" class="sns-icon" target="_blank" rel="noopener noreferrer" aria-label="Skeb">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="17" height="18" rx="2"/><line x1="7" y1="9" x2="17" y2="9"/><line x1="7" y1="13" x2="17" y2="13"/><line x1="7" y1="17" x2="13" y2="17"/></svg>
-        <span class="tooltip">おまかせイラスト</span>
-        <span class="sns-mobile-label"><span class="sns-site-name">Skeb</span><span class="sns-site-desc">おまかせイラスト</span></span>
-      </a>
-      <a href="#" class="sns-icon sns-icon--tsunagu" target="_blank" rel="noopener noreferrer" aria-label="つなぐ">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 17H7a5 5 0 0 1 0-10h2"/><path d="M15 7h2a5 5 0 0 1 0 10h-2"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-        <span class="tooltip">Wickポイント可・手数料0</span>
-        <span class="sns-mobile-label"><span class="sns-site-name">つなぐ</span><span class="sns-site-desc">Wickポイント可・手数料0</span></span>
-      </a>
-      <a href="mailto:69kayama@gmail.com" class="sns-icon sns-icon--mail" aria-label="メール">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
-        <span class="tooltip">内容相談・商用依頼</span>
-        <span class="sns-mobile-label"><span class="sns-site-name">Mail</span><span class="sns-site-desc">内容相談・商用依頼</span></span>
-      </a>
-    </div>
-  </aside>
-
-  <!-- ▼ FOOTER ▼ -->
+  <!-- ============================================================
+       FOOTER (共通)
+  ============================================================ -->
   <footer class="site-footer">
     <p class="footer-copy">© 2026 鹿山ろく</p>
   </footer>
 
+  <!-- スクリプト (共通) -->
   <script src="js/main.js"></script>
 </body>
 </html>

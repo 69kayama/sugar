@@ -9,7 +9,9 @@
 </head>
 <body class="page-commission">
 
-  <!-- ▼ HEADER ▼ -->
+  <!-- ============================================================
+       HEADER (共通：PC / Mobile)
+  ============================================================ -->
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="header-brand">
@@ -18,12 +20,14 @@
         <span class="header-name-2">Roku Kayama's portfolio</span>
       </a>
       <nav class="header-nav" aria-label="メインナビゲーション">
+        <!-- [PC] ナビゲーション -->
         <ul>
           <li><a href="index.html"      class="nav-link">Home</a></li>
           <li><a href="works.html"      class="nav-link">Works</a></li>
           <li><a href="commission.html" class="nav-link is-active">Commission</a></li>
           <li><a href="about.html"      class="nav-link">About</a></li>
         </ul>
+        <!-- [Mobile] ハンバーガーボタン -->
         <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -31,56 +35,77 @@
     </div>
   </header>
 
-  <!-- ▼ MOBILE NAV DROPDOWN ▼ -->
-  <div class="mobile-nav" aria-hidden="true">
-    <ul>
-      <li><a href="index.html"      class="nav-link">Home</a></li>
-      <li><a href="works.html"      class="nav-link">Works</a></li>
-      <li><a href="commission.html" class="nav-link is-active">Commission</a></li>
-      <li><a href="about.html"      class="nav-link">About</a></li>
-    </ul>
-    <div class="mobile-nav-sns">
-      <a href="https://x.com/69kayama" class="mobile-sns-link" target="_blank" rel="noopener noreferrer" aria-label="X">
-        <span class="mobile-sns-icon sns-icon--x"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.713 6.068 5.45-6.068zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></span>
-        <span class="mobile-sns-label">X</span>
-        <span class="mobile-sns-desc">趣味・制作報告</span>
-      </a>
-      <a href="#" class="mobile-sns-link" target="_blank" rel="noopener noreferrer" aria-label="Wick">
-        <span class="mobile-sns-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C10.5 5.5 8.5 8.5 8.5 11a3.5 3.5 0 0 0 7 0c0-2.5-2-5.5-3.5-9z"/><line x1="12" y1="14.5" x2="12" y2="19.5"/><line x1="9" y1="20.5" x2="15" y2="20.5"/></svg></span>
-        <span class="mobile-sns-label">Wick</span>
-        <span class="mobile-sns-desc">一時創作</span>
-      </a>
-      <a href="https://xfolio.jp/portfolio/69kayama" class="mobile-sns-link" target="_blank" rel="noopener noreferrer" aria-label="Xfolio">
-        <span class="mobile-sns-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21 L3 13 L6 7 L9 3 L15 9"/><path d="M12 21 L21 13 L18 7 L15 3 L9 9"/></svg></span>
-        <span class="mobile-sns-label">Xfolio</span>
-        <span class="mobile-sns-desc">イラスト・落描き置き場</span>
-      </a>
-      <a href="https://skeb.jp/@69kayama" class="mobile-sns-link" target="_blank" rel="noopener noreferrer" aria-label="Skeb">
-        <span class="mobile-sns-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="17" height="18" rx="2"/><line x1="7" y1="9" x2="17" y2="9"/><line x1="7" y1="13" x2="17" y2="13"/><line x1="7" y1="17" x2="13" y2="17"/></svg></span>
-        <span class="mobile-sns-label">Skeb</span>
-        <span class="mobile-sns-desc">おまかせイラスト</span>
-      </a>
-      <a href="#" class="mobile-sns-link" target="_blank" rel="noopener noreferrer" aria-label="つなぐ">
-        <span class="mobile-sns-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 17H7a5 5 0 0 1 0-10h2"/><path d="M15 7h2a5 5 0 0 1 0 10h-2"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span>
-        <span class="mobile-sns-label">つなぐ</span>
-        <span class="mobile-sns-desc">Wickポイント可・手数料0</span>
-      </a>
-      <a href="mailto:69kayama@gmail.com" class="mobile-sns-link" aria-label="メール">
-        <span class="mobile-sns-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg></span>
-        <span class="mobile-sns-label">Mail</span>
-        <span class="mobile-sns-desc">内容相談・商用依頼</span>
-      </a>
-    </div>
-  </div>
-
-  <!-- ▼ MAIN CONTENT ▼ -->
+  <!-- ============================================================
+       MAIN (コンテンツエリア)
+  ============================================================ -->
   <main class="page-main commission-main">
+
+    <!-- Mobile Only: Drawer Navigation -->
+    <div class="mobile-nav" aria-hidden="true">
+      <ul>
+        <li><a href="index.html"      class="nav-link">Home</a></li>
+        <li><a href="works.html"      class="nav-link">Works</a></li>
+        <li><a href="commission.html" class="nav-link is-active">Commission</a></li>
+        <li><a href="about.html"      class="nav-link">About</a></li>
+      </ul>
+      <div class="mobile-nav-sns">
+        <a href="https://x.com/69kayama" class="mobile-sns-link" target="_blank" rel="noopener noreferrer" aria-label="X">
+          <span class="mobile-sns-icon sns-icon--x"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.713 6.068 5.45-6.068zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></span>
+        </a>
+        <a href="https://wick-share.com/sns/share/39kHZdvz" class="mobile-sns-link" target="_blank" rel="noopener noreferrer" aria-label="Wick">
+          <span class="mobile-sns-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C10.5 5.5 8.5 8.5 8.5 11a3.5 3.5 0 0 0 7 0c0-2.5-2-5.5-3.5-9z"/><line x1="12" y1="14.5" x2="12" y2="19.5"/><line x1="9" y1="20.5" x2="15" y2="20.5"/></svg></span>
+        </a>
+        <a href="https://xfolio.jp/portfolio/69kayama" class="mobile-sns-link" target="_blank" rel="noopener noreferrer" aria-label="Xfolio">
+          <span class="mobile-sns-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21 L3 13 L6 7 L9 3 L15 9"/><path d="M12 21 L21 13 L18 7 L15 3 L9 9"/></svg></span>
+        </a>
+        <a href="https://skeb.jp/@69kayama" class="mobile-sns-link" target="_blank" rel="noopener noreferrer" aria-label="Skeb">
+          <span class="mobile-sns-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="17" height="18" rx="2"/><line x1="7" y1="9" x2="17" y2="9"/><line x1="7" y1="13" x2="17" y2="13"/><line x1="7" y1="17" x2="13" y2="17"/></svg></span>
+        </a>
+        <a href="#" class="mobile-sns-link" target="_blank" rel="noopener noreferrer" aria-label="つなぐ">
+          <span class="mobile-sns-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 17H7a5 5 0 0 1 0-10h2"/><path d="M15 7h2a5 5 0 0 1 0 10h-2"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span>
+        </a>
+        <a href="mailto:69kayama@gmail.com" class="mobile-sns-link" aria-label="メール">
+          <span class="mobile-sns-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg></span>
+        </a>
+      </div>
+    </div>
+
+    <!-- [Common] ページタイトル & 説明 -->
     <h1 class="page-title">COMMISSION</h1>
-    <p class="page-desc">お仕事のご依頼について<br>イラストのご依頼をご検討いただきありがとうございます<br>内容に応じて、以下の方法からご依頼ください<br>・打合せ不要・おまかせ → <a href="https://skeb.jp/@69kayama" target="_blank" rel="noopener noreferrer">Skeb</a><br>・Wickポイントでのご依頼 → <a href="#" target="_blank" rel="noopener noreferrer">つなぐ</a><br>・内容相談・商用利用 → <a href="https://forms.gle/uMex8CxiBvQkbam7A" target="_blank" rel="noopener noreferrer">依頼フォーム</a> か <a href="mailto:69kayama@gmail.com">メール</a></p>
+    <p class="page-desc">お仕事のご依頼について</p>
 
     <div class="page-content">
 
-      <!-- ▼ PRICE ▼ -->
+      <!-- 依頼窓口案内 -->
+      <section class="commission-section commission-section--methods">
+        <div class="contact-inner">
+        <p class="contact-lead">ご依頼の内容に応じて、以下の方法からお選びください。</p>
+        <ul class="method-list">
+          <li class="method-row">
+            <span class="method-label">打合せ不要・おまかせ</span>
+            <span class="method-services">
+              <a href="https://skeb.jp/@69kayama" class="method-link" target="_blank" rel="noopener noreferrer">Skeb ↗</a>
+              <a href="#" class="method-link" target="_blank" rel="noopener noreferrer">つなぐ ↗</a>
+            </span>
+          </li>
+          <li class="method-row">
+            <span class="method-label">Wickポイントでのご依頼</span>
+            <span class="method-services">
+              <a href="#" class="method-link" target="_blank" rel="noopener noreferrer">つなぐ ↗</a>
+            </span>
+          </li>
+          <li class="method-row">
+            <span class="method-label">内容相談・商用利用</span>
+            <span class="method-services">
+              <a href="https://forms.gle/uMex8CxiBvQkbam7A" class="method-link" target="_blank" rel="noopener noreferrer">フォーム ↗</a>
+              <a href="mailto:69kayama@gmail.com" class="method-link">メール</a>
+            </span>
+          </li>
+        </ul>
+        </div>
+      </section>
+
+      <!-- 料金表セクション -->
       <section class="commission-section">
         <div class="section-header">
           <span class="section-label">Price</span>
@@ -125,18 +150,14 @@
           </div>
         </div>
 
-        <!-- オプションカード -->
+        <!-- オプション -->
         <div class="options-grid">
           <div class="option-card">
-            <div>
-              <p class="option-name">差分</p>
-            </div>
+            <div><p class="option-name">差分</p></div>
             <p class="option-price">¥2,000〜 / 種</p>
           </div>
           <div class="option-card">
-            <div>
-              <p class="option-name">背景追加</p>
-            </div>
+            <div><p class="option-name">背景追加</p></div>
             <p class="option-price">¥5,000〜</p>
           </div>
           <div class="option-card">
@@ -147,9 +168,7 @@
             <p class="option-price">¥3,000〜 / 人</p>
           </div>
           <div class="option-card">
-            <div>
-              <p class="option-name">商用利用</p>
-            </div>
+            <div><p class="option-name">商用利用</p></div>
             <p class="option-price">+30%</p>
           </div>
           <div class="option-card">
@@ -160,24 +179,19 @@
             <p class="option-price">応相談</p>
           </div>
           <div class="option-card">
-            <div>
-              <p class="option-name">特急対応</p>
-            </div>
+            <div><p class="option-name">特急対応</p></div>
             <p class="option-price">応相談</p>
           </div>
         </div>
 
-        <!-- 注釈 -->
         <div class="price-notes">
           <p class="price-note">※ 上記用途・金額は一例です</p>
-          <p class="price-note">※ 打合せ不要のおまかせイラストのご依頼はSkebをご利用ください</p>
         </div>
       </section>
 
-      <!-- ▼ PROCESS + TERMS ▼ -->
+      <!-- 流れ・規約セクション -->
       <section class="commission-section">
         <div class="process-terms">
-
           <!-- PROCESS -->
           <div class="process-col">
             <div class="section-header">
@@ -185,7 +199,6 @@
               <span class="section-line"></span>
             </div>
             <p class="col-intro">制作・お手続きの流れは以下のとおりです。</p>
-
             <div class="process-steps">
               <div class="step">
                 <span class="step-num">1</span>
@@ -203,9 +216,7 @@
               </div>
               <div class="step step--payment">
                 <span class="step-num step-num--pay">¥</span>
-                <div class="step-body">
-                  <p class="step-title">お支払い（半額または全額）</p>
-                </div>
+                <div class="step-body"><p class="step-title">お支払い（半額または全額）</p></div>
               </div>
               <div class="step">
                 <span class="step-num">3</span>
@@ -216,15 +227,11 @@
               </div>
               <div class="step">
                 <span class="step-num">4</span>
-                <div class="step-body">
-                  <p class="step-title">清書</p>
-                </div>
+                <div class="step-body"><p class="step-title">清書</p></div>
               </div>
               <div class="step step--payment">
                 <span class="step-num step-num--pay">¥</span>
-                <div class="step-body">
-                  <p class="step-title">お支払い（あれば残額）</p>
-                </div>
+                <div class="step-body"><p class="step-title">お支払い（あれば残額）</p></div>
               </div>
               <div class="step">
                 <span class="step-num">5</span>
@@ -242,7 +249,7 @@
               <span class="section-label">Terms</span>
               <span class="section-line"></span>
             </div>
-            <p class="col-intro">ご依頼前に、以下の内容をご確認ください。安心してお取引いただくためのご案内です。</p>
+            <p class="col-intro">ご依頼前に、以下の内容をご確認ください。</p>
             <ul class="terms-list">
               <li class="term-card">
                 <span class="term-dot"></span>
@@ -262,15 +269,15 @@
               </li>
               <li class="term-card">
                 <span class="term-dot"></span>
-                <p class="term-text">web用PNG形式で納品いたします。PSDやタイプラプスは別途応相談。印刷用途は依頼時に必ずその旨をお伝えください。</p>
+                <p class="term-text">web用形式で納品いたします。PSD等は別途応相談。印刷用途は依頼時に必ずその旨をお伝えください。</p>
               </li>
               <li class="term-card">
                 <span class="term-dot"></span>
-                <p class="term-text"><span class="term-accent">譲渡が必要な場合は別途ご相談ください（料金が変動します）。</span>無断での二次配布・改変・AI学習は固く禁止いたします。</p>
+                <p class="term-text"><span class="term-accent">譲渡が必要な場合は別途ご相談ください（料金が変動します）</span>無断での二次配布・改変・AI学習は固く禁止いたします。</p>
               </li>
               <li class="term-card">
                 <span class="term-dot"></span>
-                <p class="term-text">制作実績として公開させていただきます。公開時期をご指定いただけます。公開不可の場合は事前にご相談ください。</p>
+                <p class="term-text">制作物は実績として公開いたします。公開時期にご指定ありましたら依頼時にお申し付けください。公開不可の場合は事前にご相談ください。</p>
               </li>
               <li class="term-card">
                 <span class="term-dot"></span>
@@ -278,75 +285,78 @@
               </li>
               <li class="term-card">
                 <span class="term-dot"></span>
-                <p class="term-text">上記・メニューに記載のない内容は都度ご相談ください。</p>
+                <p class="term-text">メニューや規約に記載のない内容は都度ご相談ください。</p>
               </li>
             </ul>
           </div>
-
         </div>
       </section>
 
-      <!-- ▼ CONTACT ▼ -->
-      <section class="commission-section">
+      <!-- お問い合わせ -->
+      <section class="commission-section" id="contact">
         <div class="section-header">
           <span class="section-label">Contact</span>
           <span class="section-line"></span>
         </div>
         <div class="contact-inner">
-          <p class="contact-lead">不明点やご相談がありましたら、まずはお気軽にご相談ください。<br><a href="mailto:69kayama@gmail.com" class="contact-mail-link">69kayama@gmail.com</a></p>
+          <p class="contact-sub">ご不明な点は<a href="mailto:69kayama@gmail.com" class="contact-mail-link">69kayama@gmail.com</a> またはフォームよりお気軽にどうぞ。</p>
           <a href="https://forms.gle/uMex8CxiBvQkbam7A" class="btn-primary" target="_blank" rel="noopener noreferrer">依頼フォームはこちら ↗</a>
           <p class="contact-note">ご依頼の前に<a href="#terms">利用規約</a>をご確認ください</p>
         </div>
       </section>
 
     </div>
+
+    <!-- [PC Only] プロフィールウィジェット (スクロールで表示) -->
+    <aside class="bottom-widget" aria-label="プロフィールウィジェット">
+      <div class="widget-brand">
+        <img src="assets/avatar.png" alt="" class="widget-avatar">
+        <span class="widget-name">ROKU KAYAMA</span>
+      </div>
+      <div class="widget-sns">
+        <a href="https://x.com/69kayama" class="sns-icon sns-icon--x" target="_blank" rel="noopener noreferrer" aria-label="X">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.713 6.068 5.45-6.068zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <span class="tooltip">趣味・制作報告</span>
+          <span class="sns-mobile-label"><span class="sns-site-name">X</span><span class="sns-site-desc">趣味・制作報告</span></span>
+        </a>
+        <a href="https://wick-share.com/sns/share/39kHZdvz" class="sns-icon sns-icon--wick" target="_blank" rel="noopener noreferrer" aria-label="Wick">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C10.5 5.5 8.5 8.5 8.5 11a3.5 3.5 0 0 0 7 0c0-2.5-2-5.5-3.5-9z"/><line x1="12" y1="14.5" x2="12" y2="19.5"/><line x1="9" y1="20.5" x2="15" y2="20.5"/></svg>
+          <span class="tooltip">一時創作</span>
+          <span class="sns-mobile-label"><span class="sns-site-name">Wick</span><span class="sns-site-desc">一時創作</span></span>
+        </a>
+        <a href="https://xfolio.jp/portfolio/69kayama" class="sns-icon sns-icon--xfolio" target="_blank" rel="noopener noreferrer" aria-label="Xfolio">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21 L3 13 L6 7 L9 3 L15 9"/><path d="M12 21 L21 13 L18 7 L15 3 L9 9"/></svg>
+          <span class="tooltip">イラスト・落描き置き場</span>
+          <span class="sns-mobile-label"><span class="sns-site-name">Xfolio</span><span class="sns-site-desc">イラスト・落描き置き場</span></span>
+        </a>
+        <a href="https://skeb.jp/@69kayama" class="sns-icon" target="_blank" rel="noopener noreferrer" aria-label="Skeb">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="17" height="18" rx="2"/><line x1="7" y1="9" x2="17" y2="9"/><line x1="7" y1="13" x2="17" y2="13"/><line x1="7" y1="17" x2="13" y2="17"/></svg>
+          <span class="tooltip">おまかせイラスト</span>
+          <span class="sns-mobile-label"><span class="sns-site-name">Skeb</span><span class="sns-site-desc">おまかせイラスト</span></span>
+        </a>
+        <a href="#" class="sns-icon sns-icon--tsunagu" target="_blank" rel="noopener noreferrer" aria-label="つなぐ">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 17H7a5 5 0 0 1 0-10h2"/><path d="M15 7h2a5 5 0 0 1 0 10h-2"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          <span class="tooltip">Wickポイント可・手数料0</span>
+          <span class="sns-mobile-label"><span class="sns-site-name">つなぐ</span><span class="sns-site-desc">Wickポイント可・手数料0</span></span>
+        </a>
+        <a href="mailto:69kayama@gmail.com" class="sns-icon sns-icon--mail" aria-label="メール">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+          <span class="tooltip">内容相談・商用依頼</span>
+          <span class="sns-mobile-label"><span class="sns-site-name">Mail</span><span class="sns-site-desc">内容相談・商用依頼</span></span>
+        </a>
+      </div>
+    </aside>
+
   </main>
 
-  <!-- ▼ LEFT-BOTTOM WIDGET ▼ -->
-  <aside class="bottom-widget" aria-label="プロフィールウィジェット">
-    <div class="widget-brand">
-      <img src="assets/avatar.png" alt="" class="widget-avatar">
-      <span class="widget-name">ROKU KAYAMA</span>
-    </div>
-    <div class="widget-sns">
-      <a href="https://x.com/69kayama" class="sns-icon sns-icon--x" target="_blank" rel="noopener noreferrer" aria-label="X">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.713 6.068 5.45-6.068zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-        <span class="tooltip">趣味・制作報告</span>
-        <span class="sns-mobile-label"><span class="sns-site-name">X</span><span class="sns-site-desc">趣味・制作報告</span></span>
-      </a>
-      <a href="#" class="sns-icon sns-icon--wick" target="_blank" rel="noopener noreferrer" aria-label="Wick">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C10.5 5.5 8.5 8.5 8.5 11a3.5 3.5 0 0 0 7 0c0-2.5-2-5.5-3.5-9z"/><line x1="12" y1="14.5" x2="12" y2="19.5"/><line x1="9" y1="20.5" x2="15" y2="20.5"/></svg>
-        <span class="tooltip">一時創作</span>
-        <span class="sns-mobile-label"><span class="sns-site-name">Wick</span><span class="sns-site-desc">一時創作</span></span>
-      </a>
-      <a href="https://xfolio.jp/portfolio/69kayama" class="sns-icon sns-icon--xfolio" target="_blank" rel="noopener noreferrer" aria-label="Xfolio">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21 L3 13 L6 7 L9 3 L15 9"/><path d="M12 21 L21 13 L18 7 L15 3 L9 9"/></svg>
-        <span class="tooltip">イラスト・落描き置き場</span>
-        <span class="sns-mobile-label"><span class="sns-site-name">Xfolio</span><span class="sns-site-desc">イラスト・落描き置き場</span></span>
-      </a>
-      <a href="https://skeb.jp/@69kayama" class="sns-icon" target="_blank" rel="noopener noreferrer" aria-label="Skeb">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="17" height="18" rx="2"/><line x1="7" y1="9" x2="17" y2="9"/><line x1="7" y1="13" x2="17" y2="13"/><line x1="7" y1="17" x2="13" y2="17"/></svg>
-        <span class="tooltip">おまかせイラスト</span>
-        <span class="sns-mobile-label"><span class="sns-site-name">Skeb</span><span class="sns-site-desc">おまかせイラスト</span></span>
-      </a>
-      <a href="#" class="sns-icon sns-icon--tsunagu" target="_blank" rel="noopener noreferrer" aria-label="つなぐ">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 17H7a5 5 0 0 1 0-10h2"/><path d="M15 7h2a5 5 0 0 1 0 10h-2"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-        <span class="tooltip">Wickポイント可・手数料0</span>
-        <span class="sns-mobile-label"><span class="sns-site-name">つなぐ</span><span class="sns-site-desc">Wickポイント可・手数料0</span></span>
-      </a>
-      <a href="mailto:69kayama@gmail.com" class="sns-icon sns-icon--mail" aria-label="メール">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
-        <span class="tooltip">内容相談・商用依頼</span>
-        <span class="sns-mobile-label"><span class="sns-site-name">Mail</span><span class="sns-site-desc">内容相談・商用依頼</span></span>
-      </a>
-    </div>
-  </aside>
-
-  <!-- ▼ FOOTER ▼ -->
+  <!-- ============================================================
+       FOOTER (共通)
+  ============================================================ -->
   <footer class="site-footer">
     <p class="footer-copy">© 2026 鹿山ろく</p>
   </footer>
 
+  <!-- スクリプト (共通) -->
   <script src="js/main.js"></script>
 </body>
 </html>

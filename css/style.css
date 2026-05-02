@@ -233,8 +233,8 @@ button {
 }
 
 .mobile-sns-icon {
-  width: 14px;
-  height: 14px;
+  width: 20px;
+  height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -242,8 +242,8 @@ button {
 }
 
 .mobile-sns-icon svg {
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
   fill: none;
   stroke: var(--color-accent);
   stroke-width: 1.6;
@@ -252,8 +252,8 @@ button {
 }
 
 .mobile-sns-icon.sns-icon--x svg {
-  width: 11px;
-  height: 11px;
+  width: 14px;
+  height: 14px;
   fill: var(--color-accent);
   stroke: none;
 }
@@ -354,7 +354,6 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 60px;
 }
 
 .footer-copy {
@@ -450,19 +449,6 @@ button {
   display: none;
 }
 
-.sns-site-name {
-  font-size: 11px;
-  font-weight: 500;
-  color: var(--color-text);
-  letter-spacing: 0.04em;
-}
-
-.sns-site-desc {
-  font-size: 10px;
-  color: var(--color-text-sub);
-  letter-spacing: 0.02em;
-}
-
 /* ---- Mobile nav SNS description ---- */
 .mobile-sns-desc {
   font-size: 9px;
@@ -537,6 +523,124 @@ button {
 }
 
 /* ============================================================
+   LIGHTBOX (Works・Home共通)
+   ============================================================ */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #FFFFFF 0%, var(--color-border) 100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.lightbox.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.55;
+  transition: opacity 0.15s;
+}
+
+.lightbox-close:hover { opacity: 1; }
+
+.lightbox-close svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: var(--color-text);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+}
+
+.lightbox-content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: min(88vw, 860px);
+  padding: 64px 0 40px;
+}
+
+.lightbox-img {
+  width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+  display: block;
+}
+
+.lightbox-nav-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 0;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.45;
+  transition: opacity 0.15s;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover { opacity: 1; }
+
+.lightbox-prev svg,
+.lightbox-next svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: var(--color-text);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.lightbox-prev[aria-hidden="true"],
+.lightbox-next[aria-hidden="true"] { visibility: hidden; }
+
+.lightbox-caption {
+  flex: 1;
+  font-size: 11px;
+  color: var(--color-text-sub);
+  text-align: center;
+  letter-spacing: 0.04em;
+  line-height: 1.7;
+  min-height: 1em;
+}
+
+@media (max-width: 768px) {
+  .lightbox-content {
+    width: 100%;
+    padding: 52px 0 20px;
+  }
+
+  .lightbox-img {
+    max-height: 65vh;
+  }
+}
+
+/* ============================================================
    LEFT-BOTTOM WIDGET (HOME以外)
    ============================================================ */
 
@@ -589,23 +693,23 @@ button {
    ============================================================ */
 
 @media (max-width: 768px) {
-  /* ---- 2-line brand header ---- */
+  /* ---- 2-line brand header (sugar / Roku Kayama's portfolio) ---- */
   .site-header {
-    height: auto;
-    padding: 10px 0;
+    height: 52px;
+    padding: 0;
   }
 
   .header-inner {
     flex-direction: row;
     align-items: center;
-    height: auto;
+    height: 100%;
     padding: 0 15px;
   }
 
   .header-brand {
     flex-direction: column;
     align-items: flex-start;
-    gap: 2px;
+    gap: 1px;
   }
 
   .header-sep {
@@ -613,7 +717,7 @@ button {
   }
 
   .header-name-1 {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .header-name-2 {
@@ -630,9 +734,9 @@ button {
     display: flex;
   }
 
-/* ---- page offset for taller mobile header ---- */
+  /* ---- page offset for mobile header ---- */
   .page-main {
-    margin-top: 64px;
+    margin-top: 52px;
     padding: 36px 16px 48px;
   }
 
@@ -640,13 +744,31 @@ button {
     display: none;
   }
 
-  /* Mobile nav SNS: vertical list */
+  /* Mobile nav SNS: アイコンのみ横並び（枠なし・PC名刺エリアと同スタイル） */
   .mobile-nav-sns {
-    flex-direction: column;
-    gap: 4px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
   }
 
   .mobile-sns-link {
-    border-radius: 6px;
+    padding: 0;
+    border: none;
+    background: none;
+    border-radius: 0;
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    transition: opacity 0.15s;
+  }
+
+  .mobile-sns-link:hover {
+    border-color: transparent;
+    color: inherit;
+    opacity: 0.55;
+  }
+
+  .mobile-sns-label {
+    display: none;
   }
 }

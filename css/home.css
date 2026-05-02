@@ -5,9 +5,9 @@
 .home-wrapper {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 42px);
-  height: calc(100svh - 42px);
-  max-height: 652px;
+  height: calc(100vh - 42px - 48px);
+  height: calc(100svh - 42px - 48px);
+  max-height: 604px;
   max-width: 900px;
   margin: 42px auto 0;
   padding-top: 20px;
@@ -152,6 +152,8 @@
   align-items: flex-end;
   justify-content: center;
   padding-bottom: 10px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 /* ============================================================
@@ -245,7 +247,7 @@
 }
 
 .home-preview-thumb {
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   width: 100%;
   background-color: var(--color-surface);
@@ -274,81 +276,111 @@
     height: auto;
     max-height: none;
     max-width: unset;
-    margin-top: 64px;
+    margin-top: 52px; /* 2行ヘッダー高さに合わせる */
     padding-top: 0;
   }
 
+  /* 縦並びにして画像を上・コンテンツを下に */
   .home-main {
     flex: 0 0 auto;
     flex-direction: column;
     overflow: visible;
   }
 
-  /* イラストを上へ */
+  /* トップ画像: 更新履歴3行分（約140px）を残してビューポートを埋める */
   .home-illust {
-    order: -1;
-    flex: 0 0 50vh;
-  }
-
-  /* 名刺エリアを下へ */
-  .home-card {
-    order: 0;
+    flex: 0 0 calc(100vh - 192px);
+    flex: 0 0 calc(100svh - 192px);
+    min-height: 260px;
     width: 100%;
-    min-width: unset;
-    flex: 0 0 auto;
-    justify-content: flex-start;
-    border-right: none;
-    padding: 20px 24px 16px;
-    gap: 8px;
   }
 
-  .card-updates {
+  /* 名刺エリアは Mobile では非表示（About ページへ） */
+  .home-card {
     display: none;
-  }
-
-  /* SNS: vertical list with name + desc */
-  .card-sns {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    margin-top: 2px;
-  }
-
-  .card-sns .sns-icon {
-    width: auto;
-    height: auto;
-    flex-direction: row;
-    gap: 8px;
-  }
-
-  .card-sns .tooltip {
-    display: none;
-  }
-
-  .card-sns .sns-mobile-label {
-    display: flex;
-    align-items: baseline;
-    gap: 5px;
-  }
-
-  .card-avatar {
-    width: 52px;
-    height: 52px;
-  }
-
-  .card-name {
-    font-size: 15px;
   }
 
   /* プレビューセクション表示 */
   .home-mobile-sections {
     display: block;
+    padding: 0 20px;
   }
-}
 
-@media (max-width: 768px) and (max-height: 640px) {
-  .home-illust {
-    flex: 0 0 40vh;
+  /* ---- Mobile updates block ---- */
+  .home-mobile-updates {
+    padding: 20px 0 16px;
+    border-bottom: 0.5px solid var(--color-border);
+    margin-bottom: 4px;
+  }
+
+  /* ---- Preview sections: 余白を広く ---- */
+  .home-preview {
+    padding: 28px 0;
+  }
+
+  .home-preview-header {
+    margin-bottom: 14px;
+  }
+
+  .home-preview-title {
+    font-size: 12px;
+  }
+
+  .home-preview-desc {
+    margin-top: 0;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  /* ---- WORKS サムネイル: 縦1列 ---- */
+  .home-preview-thumbs {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .home-preview-thumb {
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+
+  .home-preview-thumb:hover {
+    opacity: 0.88;
+  }
+
+  /* ---- ABOUT: プロフィール名刺ブロック ---- */
+  .home-about-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 0 16px;
+  }
+
+  .home-about-profile + .home-preview-desc {
+    border-top: 0.5px solid var(--color-border);
+    padding-top: 16px;
+  }
+
+  /* ---- View more: セクション下に中央揃えボタン ---- */
+  .home-preview-more {
+    display: block;
+    text-align: center;
+    margin-top: 18px;
+    padding: 10px 0;
+    border: 0.5px solid var(--color-accent-lt);
+    border-radius: 7px;
+    background: var(--color-surface);
+    color: var(--color-accent);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    transition: background 0.15s;
+  }
+
+  .home-preview-more:hover {
+    background: var(--color-border);
+    color: var(--color-accent);
   }
 }
 
