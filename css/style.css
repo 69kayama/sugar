@@ -449,12 +449,6 @@ button {
   display: none;
 }
 
-/* ---- Mobile nav SNS description ---- */
-.mobile-sns-desc {
-  font-size: 9px;
-  color: var(--color-text-sub);
-  letter-spacing: 0.02em;
-}
 
 /* ============================================================
    SECTION HEADER (タイトル＋横線)

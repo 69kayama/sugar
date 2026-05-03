@@ -358,29 +358,42 @@
     padding: 4px 0 16px;
   }
 
-  .home-about-profile + .home-preview-desc {
-    border-top: 0.5px solid var(--color-border);
-    padding-top: 16px;
-  }
-
-  /* ---- View more: セクション下に中央揃えボタン ---- */
+/* ---- View more: テキストリンク ---- */
   .home-preview-more {
     display: block;
-    text-align: center;
+    text-align: right;
     margin-top: 18px;
-    padding: 10px 0;
-    border: 0.5px solid var(--color-accent-lt);
-    border-radius: 7px;
-    background: var(--color-surface);
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: none;
     color: var(--color-accent);
-    font-size: 11px;
-    letter-spacing: 0.08em;
-    transition: background 0.15s;
+    font-size: 13px;
+    opacity: .8;
+    letter-spacing: .02em;
+    transition: opacity .25s ease, letter-spacing .25s ease;
   }
 
   .home-preview-more:hover {
-    background: var(--color-border);
+    background: none;
     color: var(--color-accent);
+    opacity: 1;
+    letter-spacing: .06em;
+  }
+
+  .circle-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    color: var(--color-bg);
+    font-size: 10px;
+    margin-left: 6px;
+    vertical-align: middle;
+    flex-shrink: 0;
   }
 }
 
