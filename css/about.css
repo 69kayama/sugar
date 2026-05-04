@@ -220,6 +220,10 @@
     padding-top: 0;
   }
 
+  .about-text {
+    text-align: left;
+  }
+
   .about-software {
     justify-content: center;
   }

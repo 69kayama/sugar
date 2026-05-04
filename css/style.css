@@ -408,18 +408,31 @@ button {
 
 /* X公式ロゴはfill描画 */
 .sns-icon--x svg {
+  width: 16px;
+  height: 16px;
   fill: var(--color-accent);
   stroke: none;
 }
 
+.sns-icon--wick svg {
+  width: 16px;
+  height: 16px;
+}
+
 .sns-icon--xfolio svg {
-  width: 18px;
-  height: 18px;
+  width: 14px;
+  height: 14px;
+  stroke-width: 2.0;
+}
+
+.sns-icon--skeb svg {
+  width: 15px;
+  height: 14px;
 }
 
 .sns-icon--mail svg {
-  width: 17px;
-  height: 17px;
+  width: 14px;
+  height: 14px;
 }
 
 /* ---- Tooltip ---- */
