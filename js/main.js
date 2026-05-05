@@ -191,6 +191,47 @@
     });
   }
 
+  // ---- Commission: sample lightbox ----
+
+  var sampleLightbox = document.getElementById('sample-lightbox');
+
+  if (sampleLightbox) {
+    var sampleLbImg     = sampleLightbox.querySelector('.lightbox-img');
+    var sampleLbCaption = sampleLightbox.querySelector('.lightbox-caption');
+    var sampleLbClose   = sampleLightbox.querySelector('.lightbox-close');
+
+    function openSampleLb(src, alt) {
+      sampleLbImg.src = src;
+      sampleLbImg.alt = alt;
+      sampleLbCaption.textContent = alt;
+      sampleLightbox.classList.add('is-open');
+      sampleLightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      sampleLbClose.focus();
+    }
+
+    function closeSampleLb() {
+      sampleLightbox.classList.remove('is-open');
+      sampleLightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    sampleLbClose.addEventListener('click', closeSampleLb);
+
+    sampleLightbox.addEventListener('click', function (e) {
+      if (e.target === sampleLightbox) closeSampleLb();
+    });
+
+    document.querySelectorAll('.price-sample').forEach(function (img) {
+      img.addEventListener('click', function () { openSampleLb(img.src, img.alt); });
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (!sampleLightbox.classList.contains('is-open')) return;
+      if (e.key === 'Escape') closeSampleLb();
+    });
+  }
+
   // ---- Left-bottom widget (HOME以外のページ) ----
 
   var widget = document.querySelector('.bottom-widget');

@@ -39,11 +39,37 @@
   background: var(--color-surface);
   border-radius: 7px;
   padding: 11px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
 }
 
 .price-card--highlight {
   border: 0.5px solid var(--color-accent-lt);
 }
+
+.price-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ---- Sample image ---- */
+
+.price-sample {
+  width: 80px;
+  flex-shrink: 0;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  transition: opacity 0.2s;
+}
+
+.price-sample:hover {
+  opacity: 0.82;
+}
+
 
 .price-menu {
   font-size: 12px;

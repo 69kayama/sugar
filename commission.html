@@ -98,38 +98,56 @@
         <!-- 料金カード -->
         <div class="price-grid">
           <div class="price-card price-card--highlight">
-            <p class="price-menu">上半身イラスト（キャラのみ）</p>
-            <p class="price-usage">配信サムネ / SNSヘッダー / 歌ってみた</p>
-            <p class="price-amount">¥8,000〜¥15,000</p>
-          </div>
-          <div class="price-card price-card--highlight">
-            <p class="price-menu">全身イラスト（キャラのみ）</p>
-            <p class="price-usage">配信立ち絵 / TRPG立ち絵 / キャラデザ</p>
-            <p class="price-amount">¥15,000〜¥30,000</p>
-          </div>
-          <div class="price-card price-card--highlight">
-            <p class="price-menu">一枚絵（背景あり）</p>
-            <p class="price-usage">キービジュアル / MV用 / ファンクラブ特典</p>
-            <p class="price-amount">¥20,000〜¥50,000</p>
-          </div>
-          <div class="price-card">
-            <p class="price-menu">顔アイコン（キャラのみ）</p>
-            <p class="price-usage">SNSアイコン</p>
-            <p class="price-amount">¥3,000〜¥5,000</p>
-          </div>
-          <div class="price-card">
-            <p class="price-menu">簡易イラスト（キャラのみ）</p>
-            <p class="price-usage">SNS投稿 / 落書き風</p>
-            <p class="price-amount">¥5,000〜¥10,000</p>
-          </div>
-          <div class="price-card">
-            <p class="price-menu">ミニキャラ（1.5-3等身キャラ）</p>
-            <p class="price-usage">SNSアイコン / グッズ / スタンプ</p>
-            <div class="price-tiers">
-              <p class="price-tier">顔のみ ¥4,000〜¥6,000</p>
-              <p class="price-tier">全身 ¥9,000〜¥14,000</p>
-              <p class="price-tier">一枚絵 ¥18,000〜¥25,000</p>
+            <div class="price-card-body">
+              <p class="price-menu">上半身イラスト（キャラのみ）</p>
+              <p class="price-usage">配信サムネ / SNSヘッダー / 歌ってみた</p>
+              <p class="price-amount">¥8,000〜¥15,000</p>
             </div>
+            <img src="assets/samples/samplesample.png" alt="上半身イラスト サンプル" class="price-sample" loading="lazy">
+          </div>
+          <div class="price-card price-card--highlight">
+            <div class="price-card-body">
+              <p class="price-menu">全身イラスト（キャラのみ）</p>
+              <p class="price-usage">配信立ち絵 / TRPG立ち絵 / キャラデザ</p>
+              <p class="price-amount">¥15,000〜¥30,000</p>
+            </div>
+            <img src="assets/samples/samplesample.png" alt="全身イラスト サンプル" class="price-sample" loading="lazy">
+          </div>
+          <div class="price-card price-card--highlight">
+            <div class="price-card-body">
+              <p class="price-menu">一枚絵（背景あり）</p>
+              <p class="price-usage">キービジュアル / MV用 / ファンクラブ特典</p>
+              <p class="price-amount">¥20,000〜¥50,000</p>
+            </div>
+            <img src="assets/samples/samplesample.png" alt="一枚絵（背景あり）サンプル" class="price-sample" loading="lazy">
+          </div>
+          <div class="price-card">
+            <div class="price-card-body">
+              <p class="price-menu">顔アイコン（キャラのみ）</p>
+              <p class="price-usage">SNSアイコン</p>
+              <p class="price-amount">¥3,000〜¥5,000</p>
+            </div>
+            <img src="assets/samples/samplesample.png" alt="顔アイコン サンプル" class="price-sample" loading="lazy">
+          </div>
+          <div class="price-card">
+            <div class="price-card-body">
+              <p class="price-menu">簡易イラスト（キャラのみ）</p>
+              <p class="price-usage">SNS投稿 / 落書き風</p>
+              <p class="price-amount">¥5,000〜¥10,000</p>
+            </div>
+            <img src="assets/samples/samplesample.png" alt="簡易イラスト サンプル" class="price-sample" loading="lazy">
+          </div>
+          <div class="price-card">
+            <div class="price-card-body">
+              <p class="price-menu">ミニキャラ（1.5-3等身キャラ）</p>
+              <p class="price-usage">SNSアイコン / グッズ / スタンプ</p>
+              <div class="price-tiers">
+                <p class="price-tier">顔のみ ¥4,000〜¥6,000</p>
+                <p class="price-tier">全身 ¥9,000〜¥14,000</p>
+                <p class="price-tier">一枚絵 ¥18,000〜¥25,000</p>
+              </div>
+            </div>
+            <img src="assets/samples/samplesample.png" alt="ミニキャラ サンプル" class="price-sample" loading="lazy">
           </div>
         </div>
 
@@ -337,6 +355,17 @@
         </a>
       </div>
     </aside>
+
+    <!-- Sample lightbox -->
+    <div id="sample-lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="サンプル画像">
+      <button class="lightbox-close" aria-label="閉じる">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="lightbox-content">
+        <img class="lightbox-img" src="" alt="">
+        <p class="lightbox-caption"></p>
+      </div>
+    </div>
 
   </main>
 
