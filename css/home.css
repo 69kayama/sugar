@@ -100,7 +100,7 @@
   position: absolute;
   inset: 0;
   opacity: 0;
-  transition: opacity 0.8s ease;
+  transition: opacity 1s ease;
 }
 
 .hero-slide.is-active {
@@ -112,6 +112,52 @@
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+/* ---- Prev / Next arrows ---- */
+
+.hero-prev,
+.hero-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  background: none;
+  border: none;
+  padding: 12px 8px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.25s;
+  color: var(--color-dot-active);
+  display: flex;
+  align-items: center;
+}
+
+.hero-prev { left: 6px; }
+.hero-next { right: 6px; }
+
+.hero-prev svg,
+.hero-next svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  display: block;
+}
+
+.home-illust:hover .hero-prev,
+.home-illust:hover .hero-next {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .hero-prev,
+  .hero-next {
+    opacity: 0.5;
+  }
 }
 
 /* ---- Dot indicators ---- */

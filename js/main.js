@@ -53,12 +53,15 @@
 
   // ---- Hero slider ----
 
-  var slides = document.querySelectorAll('.hero-slide');
-  var dots   = document.querySelectorAll('.hero-dot');
+  var slides     = document.querySelectorAll('.hero-slide');
+  var dots       = document.querySelectorAll('.hero-dot');
+  var sliderArea = document.querySelector('.home-illust');
+  var heroPrev   = document.querySelector('.hero-prev');
+  var heroNext   = document.querySelector('.hero-next');
 
   if (slides.length > 1) {
     var current  = 0;
-    var interval = 4000;
+    var INTERVAL = 5500;
     var timer;
 
     function goTo(index) {
@@ -69,15 +72,30 @@
       dots[current].classList.add('is-active');
     }
 
+    function resetTimer() {
+      clearInterval(timer);
+      timer = setInterval(function () { goTo(current + 1); }, INTERVAL);
+    }
+
     dots.forEach(function (dot, i) {
-      dot.addEventListener('click', function () {
-        goTo(i);
-        clearInterval(timer);
-        timer = setInterval(function () { goTo(current + 1); }, interval);
-      });
+      dot.addEventListener('click', function () { goTo(i); resetTimer(); });
     });
 
-    timer = setInterval(function () { goTo(current + 1); }, interval);
+    if (heroPrev) {
+      heroPrev.addEventListener('click', function () { goTo(current - 1); resetTimer(); });
+    }
+
+    if (heroNext) {
+      heroNext.addEventListener('click', function () { goTo(current + 1); resetTimer(); });
+    }
+
+    // PC のみ: ホバー中は自動送り停止
+    if (sliderArea && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      sliderArea.addEventListener('mouseenter', function () { clearInterval(timer); });
+      sliderArea.addEventListener('mouseleave', resetTimer);
+    }
+
+    timer = setInterval(function () { goTo(current + 1); }, INTERVAL);
   }
 
   // ---- 更新履歴（PCカード・モバイル共通ソース）----
